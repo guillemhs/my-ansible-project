@@ -8,6 +8,7 @@
     - name: Crear directorio de trabajo si no existe
       ansible.builtin.file:
         path: /tmp/
+        mode: '0755'
         state: directory
     - name: Crear un archivo de prueba
       ansible.builtin.copy:
