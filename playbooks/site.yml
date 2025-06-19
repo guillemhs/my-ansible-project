@@ -15,6 +15,7 @@
     - name: Crear un archivo de prueba
       ansible.builtin.copy:
         dest: /tmp/test_file.txt
+        mode: '0777'
         content: "Este es un archivo de prueba para Github Actions."
 
     - name: Escribir contenido en el archivo de prueba
