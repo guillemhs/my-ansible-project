@@ -1,0 +1,33 @@
+- name: Playbook para Github Actions
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Mostrar mensaje de inicio
+      ansible.builtin.debug:
+        msg: "Iniciando el playbook para Github Actions"
+
+    - name: Verificar si el directorio de trabajo existe
+      ansible.builtin.stat:
+
+    - name: Crear directorio de trabajo si no existe
+      ansible.builtin.file:
+    
+    - name: Crear un archivo de prueba
+      ansible.builtin.copy:
+        dest: /tmp/test_file.txt
+        content: "Este es un archivo de prueba para Github Actions."
+
+    - name: Escribir contenido en el archivo de prueba
+      ansible.builtin.lineinfile:
+        path: /tmp/test_file.txt
+        line: '# port for http by default'
+
+    - name: Mostrar contenido del archivo de prueba
+      ansible.builtin.command:
+        cmd: cat /tmp/test_file.txt
+      register: file_content
+
+    - name: Borrar archivo de prueba
+      ansible.builtin.file:
+        path: /tmp/test_file.txt
+        state: absent
