@@ -50,4 +50,4 @@ jobs:
                  pip install ansible
     
             - name: Run Ansible Playbook
-              run: ansible-playbook playbooks/site.yml -i localhost --check --diff
+              run: ansible-playbook playbooks/site.yml -i localhost
