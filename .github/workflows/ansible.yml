@@ -1,5 +1,5 @@
 #Github Actions workflow for Ansible playbook execution
-name: Ansible CI/CD Example
+name: Ansible CI/CD Example Forked
 
 on:
   push:
