@@ -1,6 +1,6 @@
 - name: Playbook para Github Actions
   hosts: localhost
-  gather_facts: no
+  gather_facts: true
   tasks:
     - name: Mostrar mensaje de inicio
       ansible.builtin.debug:
