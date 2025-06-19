@@ -23,7 +23,7 @@
         line: '# port for http by default'
 
     - name: Mostrar contenido del archivo de prueba
-      ansible.builtin.command:
+      ansible.builtin.shell:
         cmd: cat /tmp/test_file.txt
       register: file_content
 
