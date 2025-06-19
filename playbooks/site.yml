@@ -14,7 +14,7 @@
         dest: /tmp/test_file.txt
         mode: '0777'
         content: "Este es un archivo de prueba para Github Actions."
-      register: file_creation 
+      register: file_creation
     - name: Mostrar contenido del archivo de prueba
       ansible.builtin.debug:
         msg: "{{ file_creation.stdout }}"
