@@ -5,10 +5,10 @@
     - name: Mostrar mensaje de inicio
       ansible.builtin.debug:
         msg: "Iniciando el playbook para Github Actions"
-    - name: Verificar si el directorio de trabajo existe
-      ansible.builtin.stat:
     - name: Crear directorio de trabajo si no existe
       ansible.builtin.file:
+        path: /tmp/
+        state: directory
     - name: Crear un archivo de prueba
       ansible.builtin.copy:
         dest: /tmp/test_file.txt
