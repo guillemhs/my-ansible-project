@@ -24,9 +24,14 @@
         line: '# port for http by default'
 
     - name: Mostrar contenido del archivo de prueba
-      ansible.builtin.shell:
+      ansible.builtin.command:
         cmd: cat /tmp/test_file.txt
+        ignore_errors: true
       register: file_content
+    
+    - name: Mostrar contenido del archivo de prueba
+      ansible.builtin.debug:
+        msg: "{{ file_content.stdout }}"
 
     - name: Borrar archivo de prueba
       ansible.builtin.file:
